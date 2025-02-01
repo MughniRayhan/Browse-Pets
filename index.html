@@ -54,6 +54,22 @@
       .text-light {
         color: rgba(17, 17, 17, 0.7);
       }
+      .anime-left {
+        position: relative;
+        animation-name: change-left;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes change-left {
+        0% {
+          margin-left: 0px;
+        }
+        50% {
+          margin-left: 50px;
+        }
+      }
     </style>
   </head>
   <body class="sora-font">
@@ -105,22 +121,24 @@
       <div
         class="banner w-[90%] lg:mt-[76px] mt-8 lg:w-[1320px] lg:h-[749px] h-full mx-auto lg:px-10 text-[#111111] lg:bg-[url('./images/cat-big.png')] bg-cover"
       >
-        <h3
-          class="adlam-font lg:text-[56px] text-[30px] lg:w-[681px] w-[358px]"
-        >
-          Pamper Your Pet, Because They Deserve the Bes
-        </h3>
-        <p
-          class="lg:text-xl text-sm opacity-[80%] lg:my-4 my-2 lg:w-[672px] w-[310px] z-10 relative"
-        >
-          Discover a world of treats, toys, and essentials handpicked for your
-          furry friends. Shop now and make tails wag with joy!
-        </p>
-        <button
-          class="bg-[#FFDC26] font-normal rounded-lg py-2.5 lg:mt-4 mt-2 px-7 border hover:border-[#FFDC26] hover:bg-transparent text-4 z-10 relative"
-        >
-          Find a pet
-        </button>
+        <div class="w-full">
+          <h3
+            class="anime-left adlam-font lg:text-[56px] text-[25px] lg:w-[681px] w-[280px]"
+          >
+            Pamper Your Pet, Because They Deserve the Bes
+          </h3>
+          <p
+            class="lg:text-xl text-sm opacity-[80%] lg:my-4 my-2 lg:w-[672px] w-[310px] z-10 relative animate-pulse"
+          >
+            Discover a world of treats, toys, and essentials handpicked for your
+            furry friends. Shop now and make tails wag with joy!
+          </p>
+          <button
+            class="bg-[#FFDC26] font-normal rounded-lg py-2.5 lg:mt-4 mt-2 px-7 border hover:border-[#FFDC26] hover:bg-transparent text-4 z-10 relative"
+          >
+            Find a pet
+          </button>
+        </div>
         <img
           src="./images/cat-big.png"
           alt="cat-big"
@@ -543,7 +561,7 @@
           Discover Our Services
         </h3>
         <div
-          class="cards grid lg:grid-cols-3 grid-cols-1 text-[#000000] lg:gap-6 gap-2.5 w-[90%] mx-auto"
+          class="cards grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-[#000000] lg:gap-6 gap-2.5 w-[90%] mx-auto"
         >
           <div
             class="card bg-[#F9DF8A] rounded-xl flex justify-center items-center lg:py-[34px] py-[29px]"
